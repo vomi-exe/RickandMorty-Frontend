@@ -1,0 +1,40 @@
+.carousel_body{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* overflow-y: none; */
+    position: relative;
+}
+.carousel_body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .arrow_btn{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    cursor: pointer;
+}
+.check{
+    position: relative;
+}
+.arrow_btn img{
+    width: 25px;
+    height: 25px;
+}
+.left_icon{
+ 
+  left: -30px;
+}
+.right_icon{
+    top: 0;
+    right: -10px;
+}
