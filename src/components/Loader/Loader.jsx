@@ -1,5 +1,7 @@
 import styles from './Loader.module.css';
 
+// Loader componet
+
 const Loader = () => {
   return (
     <div className={styles.container}>

@@ -3,6 +3,8 @@ import Residents from '../Residents/Residents';
 import styles from './Card.module.css';
 import PropTypes from 'prop-types';
 
+//display individul card
+
 const Card = ({ character }) => {
   const statusColor = character.status === 'Alive' ? 'green' : character.status === 'Dead' ? 'red' : 'yellow';
   return (<>
@@ -15,10 +17,12 @@ const Card = ({ character }) => {
       <div className={styles.paragraph}>
         <div className={styles.origin}>
           <div className={styles.origin_title}>Origin : {character.origin.name}</div>
+          {/* to display resident of that location */}
           <Residents u={character.origin.url} />
         </div>
         <div className={styles.location}>
           <div className={styles.location_title}>Current Location : {character.location.name}</div>
+          {/* to display resident of that location */}
           <Residents u={character.location.url} />
         </div>
       </div>
@@ -29,6 +33,7 @@ const Card = ({ character }) => {
       <div className={styles.linebreak}></div>
       <div className={styles.chapters}>
         <span className={styles.chapters_title}>Chapters Featured in :</span>
+        {/* to display all the chapter charater is feateured in */}
         <Carousel chapters={character.episode} />
       </div>
     </div >

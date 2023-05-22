@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 const Chapter = ({ c }) => {
   const [name, setName] = useState('');
+  //API call to get name Chapters that the character is featured in
   useEffect(() => {
     try { 
       const getdata = async () => {

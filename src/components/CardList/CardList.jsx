@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import styles from './CardList.module.css';
 import PropTypes from 'prop-types';
 
+// iterates through all the characters to dispaly them as card components
 const CardList = (props) => {
   return (
     <div className={styles.cardlist}>
