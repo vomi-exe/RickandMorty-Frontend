@@ -4,11 +4,16 @@ import PropTypes from 'prop-types';
 const Residents = ({ u }) => {
   const [number, setNumber] = useState(0);
   useEffect(() => {
-    const getdata = async () => {
-      const response = await axios.get(`${u}`);
-      setNumber(response.data.residents.length);
-    };
-    getdata();
+    try {
+      
+      const getdata = async () => {
+        const response = await axios.get(`${u}`);
+        setNumber(response.data.residents.length);
+      };
+      getdata();
+    } catch (err) {
+      console.log(err);
+    }
   }, [u]);
   return (
     <div style={{ fontSize: '14px', letterSpacing: '0.5px' }}>Residents : {number}</div>
